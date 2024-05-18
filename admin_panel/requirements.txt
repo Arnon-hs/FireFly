@@ -1,0 +1,29 @@
+# App
+aiogram
+aiogram_dialog
+Babel
+environs
+loguru
+
+# Database & storage
+motor
+tornado
+pydantic
+redis
+
+# Web framework
+Django
+djongo
+djangorestframework
+gunicorn
+
+# Sentry SDK
+sentry-sdk
+
+# MongoDB Sentry integration
+sentry-sdk[asgi]
+sentry-sdk[django]
+
+# Sentry dependencies
+python-dateutil
+psycopg2-binary
