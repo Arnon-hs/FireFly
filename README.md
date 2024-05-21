@@ -1,78 +1,78 @@
-# FireFly Crypto
+#FireFlyCrypto
 
-Уникальный бот для заработка криптовалюты за общение в Telegram
+A unique bot for earning cryptocurrency for communicating on Telegram
 
 ![FireFly Crypto](https://i.ibb.co/jJhpkSm/fflbanner.jpg)
 
-## Описание
+## Description
 
-FireFly Crypto - это уникальный Telegram-бот, разработанный для создания инновационной и захватывающей среды общения в Telegram. Благодаря своим продвинутым функциям и возможностям, FireFly Crypto предоставляет пользователям широкий спектр инструментов для заработка криптовалюты за активное участие в диалогах.
+FireFly Crypto is a unique Telegram bot designed to create an innovative and exciting communication environment on Telegram. Thanks to its advanced features and capabilities, FireFly Crypto provides users with a wide range of tools to earn cryptocurrency for active participation in dialogues.
 
-## Используемые технологии
+## Technologies used
 
-- Python - язык программирования, на котором написан бот.
-- Aiogram - асинхронный фреймворк для разработки ботов.
-- Django - веб-фреймворк, используемый для создания административной панели и других веб-интерфейсов.
-- Docker - для контейнеризации приложения и упрощения его развертывания.
-- MongoDB - для хранения данных о пользователях, сообщениях и задачах.
-- PostgreSQL - для хранения логов и ошибок Sentry.
-- Redis - для хранения кэша, временных данных, очередей.
-- Sentry - платформа мониторинга и отслеживания ошибок, используемая для обнаружения и устранения проблем в приложении.
+- Python is the programming language in which the bot is written.
+- Aiogram is an asynchronous framework for developing bots.
+- Django is a web framework used to create the administrative panel and other web interfaces.
+- Docker - to containerize the application and simplify its deployment.
+- MongoDB - for storing data about users, messages and tasks.
+- PostgreSQL - for storing Sentry logs and errors.
+- Redis - for storing cache, temporary data, queues.
+- Sentry is a monitoring and error tracking platform used to detect and resolve problems in an application.
 
-## Модули приложения
+## Application modules
 
 ### admin_panel
 
-Каталог с административными панелями для управления ботами. Включает в себя интерфейс для администратора, где можно управлять настройками ботов, просматривать статистику, создавать и удалять задачи и т. д.
+A directory with administrative panels for managing bots. Includes an admin interface where you can manage bot settings, view statistics, create and delete tasks, etc.
 
 ### bot_counter
 
-Подмодуль с исходным кодом бота-счетчика. Включает в себя файлы для запуска бота, настройки локализации, подключение к базе данных и другие компоненты, необходимые для функционирования бота.
+Submodule with the source code of the counter bot. Includes files for launching the bot, localization settings, database connection and other components necessary for the bot to function.
 
 ### bot_main
 
-Подмодуль с основным ботом. Включает в себя основные классы бота, обработчики команд, логику работы с базой данных и другие вспомогательные функции.
+Submodule with the main bot. Includes the main bot classes, command handlers, database logic and other auxiliary functions.
 
 ### data
 
-Каталог с файлами конфигурации и локализации. Включает в себя файлы конфигурации для ботов, настройки локализации сообщений и другие данные, используемые приложением.
+Directory with configuration and localization files. Includes configuration files for bots, message localization settings, and other data used by the application.
 
 ### models
 
-Каталог с моделями данных, используемыми в проекте. Включает в себя классы для работы с базой данных, представляющие собой модели данных для хранения информации о пользователях, сообщениях, задачах и т. д.
+A directory containing data models used in the project. Includes database classes, which are data models for storing information about users, messages, tasks, etc.
 
 ### utils
 
-Утилиты и вспомогательные функции. Включает в себя функции для логирования, обработки исключений, отправки уведомлений и другие вспомогательные компоненты.
+Utilities and auxiliary functions. Includes functions for logging, exception handling, sending notifications and other auxiliary components.
 
-## Инструкция по запуску с помощью Docker Compose
+## Instructions for running with Docker Compose
 
-1. Убедитесь, что у вас установлен Docker и Docker Compose.
-2. Склонируйте репозиторий на локальную машину:
-   ```bash
-   git clone https://github.com/Arnon-hs/FireFly.git
-3. Перейдите в каталог с проектом
-   ```bash
-    cd FireFly
-4. Создайте файл .env и укажите необходимые переменные окружения
-5. Запустите контейнеры с помощью Docker Compose
-   ```bash
-   docker-compose up --build -d
+1. Make sure you have Docker and Docker Compose installed.
+2. Clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/Arnon-hs/FireFly.git
+3. Go to the directory with the project
+    ```bash
+     cd FireFly
+4. Create a .env file and specify the necessary environment variables
+5. Run containers with Docker Compose
+    ```bash
+    docker-compose up --build -d
 
-## Рекомендации для разработчиков
+## Recommendations for developers
 
-1. Периодически обновляйте зависимости проекта, следите за обновлениями используемых библиотек и инструментов.
-2. Документируйте код, чтобы другие разработчики могли легко понимать его структуру и логику.
-3. Тестируйте код перед развертыванием на продуктовом сервере, чтобы избежать возможных проблем с работой бота.
-4. Поддерживайте актуальную документацию по проекту, включая инструкции по установке, использованию и обновлению.
+1. Periodically update the project dependencies, monitor the updates of the libraries and tools used.
+2. Document your code so that other developers can easily understand its structure and logic.
+3. Test your code before deploying it to a production server to avoid possible problems with the bot’s operation.
+4. Maintain current project documentation, including installation, usage, and update instructions.
 
-## Лицензия
+## License
 
-Весь код и файлы в этом репозитории защищены авторскими правами. Использование, копирование, распространение и модификация без разрешения владельца авторских прав запрещены.
+All code and files in this repository are protected by copyright. Use, copying, distribution and modification without permission of the copyright owner is prohibited.
 
-## Контакты
+## Contacts
 
-Для связи с разработчиком или получения дополнительной информации о приложении вы можете обратиться по следующим контактам:
+To contact the developer or obtain additional information about the application, you can contact the following contacts:
 
 - Email: arnon.hs.btc@gmail.com
 - Telegram: @whiterose_sc
