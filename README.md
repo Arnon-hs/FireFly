@@ -2,7 +2,7 @@
 
 A unique bot for earning cryptocurrency for communicating on Telegram
 
-![FireFly Crypto](https://i.ibb.co/jJhpkSm/fflbanner.jpg)
+![FireFly Crypto](https://i.ibb.co/K2MQXYv/Firefly.png)
 
 ## Description
 
