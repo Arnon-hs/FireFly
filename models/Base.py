@@ -17,8 +17,15 @@ class PyObjectId(ObjectId):
         return ObjectId(v)
 
     @classmethod
-    def __modify_schema__(cls, field_schema):
-        field_schema.update(type='string')
+    def __get_pydantic_json_schema__(cls, handler):
+        field_schema = handler(cls)
+        field_schema.update(type='string', format='ObjectId')
+        return field_schema
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, handler):
+        schema = handler(ObjectId)
+        return {'type': 'string'}
 
 class Base(BaseModel):
     id: Optional[PyObjectId] = Field(default_factory=PyObjectId, alias='_id')
@@ -27,11 +34,18 @@ class Base(BaseModel):
         json_encoders = {
             ObjectId: str,
         }
+        arbitrary_types_allowed = True  # Разрешение произвольных типов
 
     @classmethod
-    def __get_pydantic_json_schema__(cls, *, by_alias: bool = True) -> Dict[str, Any]:
-        schema = super().__get_pydantic_json_schema__(by_alias=by_alias)
+    def __get_pydantic_json_schema__(cls, handler):
+        schema = handler(cls)
         schema['title'] = cls.__name__
+        schema['properties']['id'] = {'type': 'string', 'format': 'ObjectId'}
+        return schema
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, handler):
+        schema = handler(cls)
         schema['properties']['id'] = {'type': 'string', 'format': 'ObjectId'}
         return schema
 
